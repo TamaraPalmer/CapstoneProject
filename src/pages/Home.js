@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Typography from "@mui/material/Typography";
-import discoverUs from "../assets/images/DiscoverUs.png";
+// import discoverUs from "../assets/images/DiscoverUs.png";
 import BrowseArtist from "../components/BrowseArtist/BrowseArtist";
 // import Home from '../Home.scss';
 

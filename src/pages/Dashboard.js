@@ -1,12 +1,12 @@
 import * as React from "react";
 import axios from "axios";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
+// import Container from "@mui/material/Container";
+// import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import BrowseArtist from "../components/BrowseArtist/BrowseArtist";
-import Avatar from "@mui/material/Avatar";
-import Icon from "@mui/material/SvgIcon";
+// import Avatar from "@mui/material/Avatar";
+// import Icon from "@mui/material/SvgIcon";
 
 const theme = createTheme();
 

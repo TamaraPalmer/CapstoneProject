@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import "./ArtistProfile.scss";
 import axios from "axios";
 
-const ArtistProfile = ({}) => {
+function ArtistProfile () {
   const { idFromParams } = useParams();
   const [artist, setArtist] = useState(null);
 
