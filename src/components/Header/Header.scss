@@ -1,0 +1,276 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/typography";
+
+.header {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    height: 0.5625rem;
+    padding-top: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $spotify-green;
+
+
+    @include tablet {
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+        padding-top: .625rem;
+        height: 5rem;
+    }
+
+    @include desktop {
+        margin-left: 6.25rem;
+        margin-right: 6.25rem;
+    }
+
+    &__logo {
+        height: 6.875rem;
+        margin-bottom: .5rem;
+
+        @include desktop {
+            height: 1.5625rem;
+        }
+
+        &-img {
+            text-align: center;
+            width: 100%;
+            max-width: 41%;
+
+            @include tablet {
+                text-align: start;
+                width: 20%;
+                margin-right: 5rem;
+            }
+
+            @include desktop {
+                width: 0;
+                margin-right: 31.8125rem;
+            }
+        }
+    }
+
+    &__form {
+        width: 100%;
+
+        @include tablet {
+            margin-right: 1.5rem;
+        }
+    }
+
+    &__search {
+        font-family: "Avenir Regular";
+        width: 60%;
+        height: 2.125rem;
+        margin-bottom: 0.5rem;
+        background: url(http://localhost:3000/static/media/search.b2de04b….svg) no-repeat scroll 7px 9px;
+        background-color: #FAFAFA;
+        padding-left: 2.1875rem;
+        border: 1px solid site-secondary-mercury;
+        border-radius: 1.3125rem;
+
+        @include tablet {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        @include desktop {
+            font-size: 0.9rem;
+        }
+    }
+
+    &__navigation {
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            &-link {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    margin-right: 1rem;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        color: $spotify-light-gray;
+                        text-decoration: none;
+                        transition: color 0.2s;
+
+                        &:hover {
+                            color: $spotify-green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__upload {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: stretch;
+        justify-content: center;
+        align-items: center;
+
+        .header__button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $spotify-white;
+            background-color: $spotify-green;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: darken($spotify-green, 10%);
+            }
+
+            &__upload-icon {
+                margin-right: 5px;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                @include tablet {
+                    align-items: center;
+                    justify-content: space-around;
+                }
+            }
+        }
+
+        &-picture {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+
+
+        }
+    }
+}
+
+.navigation {
+    &__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &__item {
+            margin-right: 1rem;
+
+            @include tablet {
+                margin-right: 2rem;
+            }
+        }
+
+        &__link {
+            color: $spotify-white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.2s;
+
+            &:hover {
+                color: #999;
+            }
+
+            @include tablet {
+                font-size: 1.4rem;
+            }
+
+            @include desktop {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+
+
+.sidebar {
+    position: relative;
+    width: 122px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+
+    &__button {
+        display: block;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #444;
+        }
+    }
+
+    &__list-container {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1;
+
+        &__item {
+            margin: 5px 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 1;
+
+            & a {
+                color: #333;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &.open {
+        &__list-container {
+            display: block;
+        }
+    }
+}

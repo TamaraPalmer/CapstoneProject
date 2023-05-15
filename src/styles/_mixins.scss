@@ -1,0 +1,118 @@
+@import "./typography";
+
+@mixin mobile {
+    @media screen and (min-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin button {
+    font-family: "Avenir Bold", sans-serif;
+    background-color: $sound-cloud-orange;
+    border: none;
+    border-radius: .3125rem;
+    color: $spotify-white;
+    height: 100%;
+    cursor: pointer;
+    transition: 1s;
+
+    &:hover {
+        background-color: $sound-cloud-orange;
+    }
+
+    @include tablet {
+        font-size: 1rem;
+    }
+
+}
+
+@mixin button-reverse {
+    font-family: "Avenir Bold";
+    background-color: $spotify-white;
+    border: none;
+    border-radius: 5px;
+    color: $sound-cloud-orange;
+    height: 100%;
+    cursor: pointer;
+    transition: 1s;
+
+    &:hover {
+        background-color: $sound-cloud-light-gray;
+        color: $sound-cloud-orange;
+    }
+
+    @include tablet {
+        font-size: 1rem;
+    }
+}
+
+@mixin textarea {
+    font-family: "Avenir Regular", sans-serif;
+    background-color: $sound-cloud-light-gray;
+    border: 0.125rem solid $spotify-green;
+    border-radius: .1875rem;
+    width: 100%;
+    line-height: 2em;
+    padding-left: .625rem;
+    margin-top: .625rem;
+    margin-bottom: .625rem;
+    box-sizing: border-box;
+}
+
+@mixin divider {
+    border: none;
+    background-color: $spotify-green;
+    height: 1px;
+
+    @include desktop {
+        width: 100%;
+    }
+}
+
+@mixin heading-1 {
+    font-family: "Avenir Bold", sans-serif;
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+
+@mixin heading-2 {
+    font-family: "Avenir Demi Bold", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.375rem;
+}
+
+@mixin heading-3 {
+    font-family: "Avenir Demi Bold", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.125rem;
+}
+
+@mixin heading-4 {
+    font-family: "Avenir Regular", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.125rem;
+}
+
+@mixin heading-5 {
+    font-family: "Avenir Regular", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+}
+
+@mixin paragraph {
+    font-family: "Avenir Regular", sans-serif;
+    font-size: 1rem;
+    color: $spotify-dark-gray;
+}

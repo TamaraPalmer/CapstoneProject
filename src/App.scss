@@ -1,0 +1,10 @@
+@import "./styles/mixins";
+@import "./styles/typography";
+@import "./styles/variables";
+
+* {
+  margin: 0rem;
+  box-sizing: border-box;
+  // background-color: $spotify-dark-gray ;
+  text-decoration: none;
+}
