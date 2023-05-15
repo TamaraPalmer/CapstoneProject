@@ -1,12 +1,8 @@
 import * as React from "react";
 import axios from "axios";
 import Typography from "@mui/material/Typography";
-// import Container from "@mui/material/Container";
-// import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import BrowseArtist from "../components/BrowseArtist/BrowseArtist";
-// import Avatar from "@mui/material/Avatar";
-// import Icon from "@mui/material/SvgIcon";
 
 const theme = createTheme();
 
@@ -31,14 +27,26 @@ export default function Album() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Typography component="h2" variant="subtitle6"   sx={{ fontWeight: "bold", color: "Green", mb: 2 }}
+      <Typography
+        component="h2"
+        variant="subtitle6"
+        sx={{ fontWeight: "bold", color: "Green", mb: 2 }}
       >
         Here are favorite tracks, playlists and albums from Unsigned artist
       </Typography>
-      <Typography component="h1" variant="subtitle4" sx={{ fontWeight:"bold",fontFamily: "Merriweather", color: "red", mb: 2 }}>
-      Top Playlist by Listen
-        </Typography>
-      <BrowseArtist />
+      <Typography
+        component="h1"
+        variant="subtitle4"
+        sx={{
+          fontWeight: "bold",
+          fontFamily: "Merriweather",
+          color: "red",
+          mb: 2,
+        }}
+      >
+        Top Playlist by Listen
+      </Typography>
+      <BrowseArtist artists={artists} />
     </ThemeProvider>
   );
 }

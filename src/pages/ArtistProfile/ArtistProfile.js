@@ -21,7 +21,7 @@ function ArtistProfile () {
     return <div>Loading...</div>;
   }
 
-  const { name, bio, followers, albums } = artist;
+  const { name, bio, followers } = artist;
 
   return (
     <div className="artist-profile">
