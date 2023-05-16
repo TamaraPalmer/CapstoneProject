@@ -25,8 +25,10 @@ const Home = () => {
           <Link to="/browse">
             <button className="header__button">Scout</button>
           </Link>
+          <signUp/>
         </Typography>
         <BrowseArtist />
+        <SignUp />
       </main>
     </div>
   );
