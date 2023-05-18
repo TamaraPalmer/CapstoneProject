@@ -1,0 +1,10 @@
+@import "/Users/tamarapalmer/Desktop/CapstoneProject/src/styles/_variables.scss";
+@import "/Users/tamarapalmer/Desktop/CapstoneProject/src/styles/_mixins.scss";
+@import "/Users/tamarapalmer/Desktop/CapstoneProject/src/styles/_typography.scss";
+
+
+.upload__button {
+    @include button;
+
+
+}

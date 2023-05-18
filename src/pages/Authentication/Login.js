@@ -23,7 +23,7 @@ function Copyright(props) {
     >
       {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        DiscoverUs
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -45,7 +45,8 @@ export default function Login() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container  className="login-container"
+       component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
@@ -55,7 +56,7 @@ export default function Login() {
             alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+          <Avatar sx={{ m: 1, bgcolor: "red" }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -91,14 +92,16 @@ export default function Login() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
+            <Link to="/dashbaord"> 
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 3, mb: 2, bgcolor: "red" }}
             >
               Login In
             </Button>
+            </Link>
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">

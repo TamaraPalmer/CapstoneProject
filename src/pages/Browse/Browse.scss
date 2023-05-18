@@ -1,0 +1,20 @@
+@import "/Users/tamarapalmer/Desktop/CapstoneProject/src/styles/_variables.scss";
+@import "/Users/tamarapalmer/Desktop/CapstoneProject/src/styles/_mixins.scss";
+@import "/Users/tamarapalmer/Desktop/CapstoneProject/src/styles/_typography.scss";
+
+
+.browse {
+    background-color: $spotify-green;
+    background: linear-gradient($spotify-green, $spotify-dark-gray 10%);
+
+    &__img-top {
+        width: 100%;
+    }
+
+    &__img-bottom {
+        width: 100%;
+        margin-bottom: -1rem;
+
+
+    }
+}

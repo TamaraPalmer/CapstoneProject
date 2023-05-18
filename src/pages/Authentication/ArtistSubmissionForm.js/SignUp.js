@@ -18,7 +18,7 @@ function Copyright(props) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        DiscoverUs
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -40,7 +40,7 @@ export default function SignUp() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container  className="signup-container" component="main" maxWidth="xs">
         <CssBaseline />
         <Box
           sx={{
@@ -50,7 +50,7 @@ export default function SignUp() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: 'red' }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -103,21 +103,23 @@ export default function SignUp() {
               <Grid item xs={12}>
                 <FormControlLabel
                   control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
+                  label= " connect with emerging artist "
                 />
               </Grid>
             </Grid>
+            <Link to="/dashboard">
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 3, mb: 2,bgcolor: 'red' }}
             >
               Sign Up
             </Button>
+            </Link>
             <Grid container justifyContent="flex-end">
-              <Grid item>
-                <Link href="#" variant="body2">
+              <Grid item>   
+            <Link to="/login" href="#" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>

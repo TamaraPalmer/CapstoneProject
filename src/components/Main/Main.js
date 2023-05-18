@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import ArtistCard from "../ArtistCard/ArtistCard";
+import { Typography } from "@mui/material";
 
 const Main = () => {
   return (
     <div>
       <main>
-        <h1>DiscoverUs</h1>
-        <p>Unleash Music's Hidden Gems with DiscoverUs!DiscoverUs</p>
+        <Typography>DiscoverUs</Typography>
+        <Typography>
+          Unleash Music's Hidden Gems with DiscoverUs!DiscoverUs
+        </Typography>
         <div className="header__upload">
           <div className="header__upload-container">
             <Stack direction="row" alignItems="center" spacing={2}>
@@ -22,7 +25,7 @@ const Main = () => {
                 <input hidden accept="image/*" multiple type="file" />
               </Button>
             </Stack>
-            <h1>Are you an Artist</h1>
+            <Typography>Are you an Artist</Typography>
             <Stack direction="row" alignItems="center" spacing={2}>
               <Button variant="contained" component="label">
                 Upload
@@ -30,9 +33,9 @@ const Main = () => {
               </Button>
             </Stack>
           </div>
-          <p>Upload your music to get discovered</p>
-          <h2>Are you an Artist </h2>
-          <p> Here's who's hot and trending </p>
+          <Typography>Upload your music to get discovered</Typography>
+          <Typography>Are you an Artist </Typography>
+          <Typography> Here's who's hot and trending </Typography>
           <ArtistCard />
         </div>
       </main>

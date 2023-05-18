@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "./BrowseArtist.scss";
 
 function BrowseArtist() {
@@ -13,21 +13,19 @@ function BrowseArtist() {
   useEffect(() => {
     axios
       .get(
-        "https://v1.nocodeapi.com/fyiah876/spotify/fHCqbcjtNZRlBCZl/playlists?id=5HlbFuuO9gZ3Y4coHUtsSO?si=7dbcfaa9160c4816"
+        "https://v1.nocodeapi.com/fyiah876/spotify/fHCqbcjtNZRlBCZl/playlists?id=5HlbFuuO9gZ3Y4coHUtsSO"
       )
       .then((response) => {
-        const tracks = response.data.tracks.items
-          .slice(0, 6) // include only the first 6 tracks
-          .map((item) => {
-            const track = item.track;
-            return {
-              name: track.name,
-              artist: track.artists[0].name, // assuming there is only one artist per track
-              image: track.album.images[0].url, // get the first image url of the album
-              preview: track.preview_url,
-              id: track.artists[0].id,
-            };
-          });
+        const tracks = response.data.tracks.items.map((item) => {
+          const track = item.track;
+          return {
+            name: track.name,
+            artist: track.artists[0].name, // assuming there is only one artist per track
+            image: track.album.images[0].url, // get the first image url of the album
+            preview: track.preview_url,
+            id: track.artists[0].id,
+          };
+        });
         setMusic(tracks);
       });
   }, []);
@@ -70,7 +68,7 @@ function BrowseArtist() {
   }
 
   return (
-    <div className="container">
+    <div className="browse-artist">
       <audio id="audioPlayer" onEnded={handleSongEnd} preload="auto"></audio>
       <div className="cards">
         {music.map((track, index) => (

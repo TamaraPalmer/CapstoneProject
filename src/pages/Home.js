@@ -1,35 +1,55 @@
-import React from "react";
+import "./Home.scss";
 import { Link } from "react-router-dom";
 import Typography from "@mui/material/Typography";
-// import discoverUs from "../assets/images/DiscoverUs.png";
+import hero from "../assets/images/hero.jpg";
+import bottom from "../assets/images/bottom.jpg";
 import BrowseArtist from "../components/BrowseArtist/BrowseArtist";
-// import Home from '../Home.scss';
+import Upload from "../components/Upload/Upload";
+import ArtistResource from "../components/ArtistResource/ArtistResource";
 
 const Home = () => {
   return (
     <div className="home">
-      <main className="home__content">
+      <img className="home__img-top" src={hero} alt="" />
+      <div className="home__hero">
         <Typography
-          variant="h5"
-          sx={{ fontWeight: "bold", color: "red", mb: 2 }}
+          variant="h4"
+          sx={{ fontFamily: "Arial", color: "white", mb: 2 }}
         >
           Unleash Music's Hidden Gems with DiscoverUs
         </Typography>
         <Typography variant="h7" component="p">
-          <Typography
-            variant="h5"
-            sx={{ fontFamily: "Merriweather", color: "orange", mb: 2 }}
+          <div
+            className="button-wrapper"
+            style={{ display: "flex", gap: "52px", flexDirection: "row" }}
           >
-            Scout, Listen and Play more Music!
-          </Typography>
-          <Link to="/browse">
-            <button className="header__button">Scout</button>
-          </Link>
-          <signUp/>
+            <Link to="/browse">
+              <button className="home__button">Listen</button>
+            </Link>
+            <Link to="/signup">
+              <button className="home__button">Find out more </button>
+            </Link>
+          </div>
         </Typography>
+      </div>
+      <div className="home__artist">
+        <Upload />
         <BrowseArtist />
-        <SignUp />
-      </main>
+      </div>
+      <div className="home__closing">
+        <Typography
+          variant="h5"
+          sx={{ fontFamily: "Arial", color: "white", mb: 1, margin: "10px" }}
+        >
+          Thanks for listening. Now Sign Up. Scout for emerging artist,
+          collaborate and build your playlists. All for free.
+        </Typography>
+        <Link to="/browse">
+          <button className="home__button">Scout</button>
+        </Link>
+      </div>
+      <ArtistResource />
+      <img className="home__img-bottom" src={bottom} alt="producers" />
     </div>
   );
 };

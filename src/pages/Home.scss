@@ -1,32 +1,33 @@
-@import "../../styles/variables";
-@import "../../styles/mixins";
-@import "../../styles/typography";
+@import "/Users/tamarapalmer/Desktop/CapstoneProject/src/styles/_variables.scss";
+@import "/Users/tamarapalmer/Desktop/CapstoneProject/src/styles/_mixins.scss";
+@import "/Users/tamarapalmer/Desktop/CapstoneProject/src/styles/_typography.scss";
+
 
 .home {
-    margin-left: 0rem;
-    margin-right: 0rem;
-    height: 0.5625rem;
-    padding-top: 1.25rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: flex-start;
-    justify-content: space-around;
-    align-items: center;
-    background-color: $spotify-green;
+    background-color: $spotify-dark-gray;
 
 
-
-
-    @include tablet {
-        flex-wrap: nowrap;
-        align-items: center;
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
-        padding-top: .625rem;
-        height: 5rem;
-        background-color: $spotify-green;
+    &__img-top {
+        width: 100%;
     }
+
+    &__img-bottom {
+        width: 100%;
+        margin-bottom: -1rem;
+
+
+    }
+
+    &__hero {
+        background-color: $spotify-green;
+        background: linear-gradient($spotify-green, $spotify-dark-gray 100%);
+    }
+
+    &__artist {
+        background-color: $spotify-green;
+        background: linear-gradient($spotify-dark-gray, $spotify-green 250%);
+    }
+
 
     @include desktop {
         margin-left: 6.25rem;
@@ -59,33 +60,7 @@
     }
 
 
-    .home__button {
-        color: $spotify-white;
-        background-color: $spotify-green;
-        border-radius: 0;
-        max-width: 50%;
-        height: 50%;
-        font-size: 2rem;
-        font-weight: 600;
-        text-decoration: none;
-        padding: 12px 24;
-        margin-right: 10px;
-        transition: background-color 0.2s;
-
-        &:hover {
-            background-color: darken($spotify-green, 10%);
-        }
-
-        &__upload-icon {
-            margin-right: 5px;
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-
-            @include tablet {
-                align-items: center;
-                justify-content: space-around;
-            }
-        }
+    &__button {
+        @include button;
     }
 }

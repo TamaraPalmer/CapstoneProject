@@ -8,7 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import SignUp from "./pages/Authentication/ArtistSubmissionForm.js/SignUp";
 import Login from "./pages/Authentication/Login";
-import './App.scss';
+import "./App.scss";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path="/browse" element={<Browse />} />
         <Route path="/artist/:idFromParams" element={<ArtistProfile />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/Login" element={<Login/>} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
       </Routes>
       <Footer />

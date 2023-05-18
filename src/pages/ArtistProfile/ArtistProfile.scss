@@ -6,12 +6,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: $spotify-green;
+    background: linear-gradient($spotify-green, $spotify-dark-gray 100%);
 
     img {
-        width: 200px;
-        height: 200px;
+        width: 100%;
         object-fit: cover;
-        border-radius: 50%;
         margin-bottom: 1rem;
     }
 
@@ -20,12 +20,13 @@
         margin-bottom: 0.5rem;
         color: $spotify-white;
     }
+
     h3 {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
-        color: $spotify-white;
+        color: $spotify-light-gray;
     }
-    
+
     p {
         margin-bottom: 1rem;
     }

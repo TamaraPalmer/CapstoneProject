@@ -14,10 +14,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <Box
-      component="footer"
-      sx={{ bgcolor: "primary.main", color: "white", p: 4 }}
-    >
+    <Box component="footer" sx={{ bgcolor: "black", color: "white", p: 4 }}>
       <Container maxWidth="lg">
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           <Typography variant="h6">Contact Us </Typography>
@@ -25,7 +22,7 @@ function Footer() {
             <IconButton
               sx={{ mr: 1 }}
               color="inherit"
-              href="mailto:example@example.com"
+              href="mailto:fyiaht@example.com"
             >
               <EmailIcon />
             </IconButton>
@@ -81,4 +78,3 @@ function Footer() {
 }
 
 export default Footer;
-

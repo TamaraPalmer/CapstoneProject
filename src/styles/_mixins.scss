@@ -18,24 +18,26 @@
     }
 }
 
+
+
 @mixin button {
-    font-family: "Avenir Bold", sans-serif;
-    background-color: $sound-cloud-orange;
+    font-size: 1rem;
+    max-width: 100;
+    border-radius: 100px;
+    height: 31px;
+    background-color: #FF5500;
+    color: #FFFFFF;
     border: none;
-    border-radius: .3125rem;
-    color: $spotify-white;
-    height: 100%;
-    cursor: pointer;
-    transition: 1s;
+    transition: background-color 0.2s;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    min-width: 66%;
+    margin-bottom: 1rem;
+
 
     &:hover {
-        background-color: $sound-cloud-orange;
+        background-color: darken($spotify-green, 10%);
     }
-
-    @include tablet {
-        font-size: 1rem;
-    }
-
 }
 
 @mixin button-reverse {
