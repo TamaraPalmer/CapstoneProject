@@ -22,18 +22,17 @@ const Home = () => {
           <div
             className="button-wrapper"
             style={{ display: "flex", gap: "52px", flexDirection: "row" }}
-          >
-            <Link to="/browse">
-              <button className="home__button">Listen</button>
-            </Link>
-            <Link to="/signup">
-              <button className="home__button">Find out more </button>
-            </Link>
-          </div>
+          ></div>
         </Typography>
       </div>
       <div className="home__artist">
         <Upload />
+        <Link to="/signup">
+          <button className="home__button">Sign Up Today </button>
+        </Link>
+        <Link to="/browse">
+          <button className="home__button">Listen</button>
+        </Link>
         <BrowseArtist />
       </div>
       <div className="home__closing">

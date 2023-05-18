@@ -7,13 +7,14 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import profile from "../../assets/images/profile.jpg";
+import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import "./Header.scss";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/DiscoverUs.png";
+
 const pages = ["Home", "Browse", "Dashboard"];
 const settings = ["Artist", "Login", "SignUp"];
 
@@ -130,12 +131,11 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <img
-                  className="header__top-img"
-                  src={profile}
-                  alt="profile-pic"
+                <Avatar
+                  alt="Jasmine"
+                  src="/profile/images/avatar/2.jpg"
+                  sx={{ width: 20, height: 20 }}
                 />
-                {/* sx={{ width: 20, height: 20 }} /> */}
               </IconButton>
             </Tooltip>
             <Menu
